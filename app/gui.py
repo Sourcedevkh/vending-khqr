@@ -272,7 +272,13 @@ class VendingApp:
             n_var = tk.StringVar(value=str(item.get("product", "")))
 
             # Input styling
-            e_opts = {"font": ("Helvetica", 11), "relief": "flat", "bg": "#f9fafb"}
+            e_opts = {
+                "font": ("Helvetica", 11),
+                "relief": "flat",
+                "bg": "#f9fafb",
+                "fg": "#111827",
+                "insertbackground": "#111827",
+            }
             
             tk.Entry(row_card, textvariable=c_var, **e_opts).grid(row=0, column=0, padx=15, pady=12, sticky="ew")
             tk.Entry(row_card, textvariable=p_var, **e_opts).grid(row=0, column=1, padx=15, pady=12, sticky="ew")
